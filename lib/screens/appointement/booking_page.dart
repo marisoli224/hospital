@@ -112,7 +112,7 @@ class _BookingPageState extends State<BookingPage> {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color:
-                                  _currentIndex == index ? Colors.white : null,
+                                  _currentIndex == index ? Colors.black : null,
                             ),
                           ),
                         ),
@@ -134,7 +134,7 @@ class _BookingPageState extends State<BookingPage> {
                   final getDay = DateConverted.getDay(_currentDay.weekday);
                   final getTime = DateConverted.getTime(_currentIndex!);
 
-                  insertAppointmentToFirestore(getDate,getDay,getTime,doctor,user?.id ?? ' ');
+                  insertAppointmentToFirestore(getDate,getDay,getTime,doctor,user?.id??'' );
 
 
 
